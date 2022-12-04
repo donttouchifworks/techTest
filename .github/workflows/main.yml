@@ -24,3 +24,6 @@ jobs:
         server: lavrentiev.tech
         username: ${{ secrets.FTP_USER}}
         password: ${{ secrets.FTP_PASSWORD }}
+        local_dir: "./web-build"
+        remote_dir: "/domains/lavrentiev.tech/public_html"
+        delete: "true"
