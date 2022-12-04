@@ -16,8 +16,8 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install
-        expo build:web
-    
+        npm run build
+        
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
