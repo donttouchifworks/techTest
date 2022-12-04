@@ -17,7 +17,7 @@ jobs:
       run: |
         npm install
         npm run build
-        - name: List output files
+        name: List output files
         	  run: find web-build/ -print
 
     - name: 📂 Sync files
