@@ -21,7 +21,7 @@ jobs:
         	    CI: false
 
         - name: List output files
-        	  run: find build-web/ -print
+        	  run: find web-build/ -print
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -29,5 +29,5 @@ jobs:
         server: '${{ secrets.FTP_ADDRESS }}'
         username: '${{ secrets.FTP_USER }}'
         password: '${{ secrets.FTP_PASSWORD }}'
-        local-dir: build-web/
+        local-dir: web-build/
         server-dir: /domains/lavrentiev.tech/public_html
