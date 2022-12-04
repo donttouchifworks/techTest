@@ -27,4 +27,4 @@ jobs:
         username: '${{ secrets.FTP_USER }}'
         password: '${{ secrets.FTP_PASSWORD }}'
         local-dir: web-build/
-        server-dir: /domains/lavrentiev.tech/public_html
+        server-dir: /domains/lavrentiev.tech/public_html/
