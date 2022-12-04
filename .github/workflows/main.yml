@@ -19,7 +19,7 @@ jobs:
         npm run build
         
     - name: 📂 Sync files
-      uses: airvzxf/ftp-deployment-action@lates
+      uses: airvzxf/ftp-deployment-action@1.0
       with:
         server: lavrentiev.tech
         username: ${{ secrets.FTP_USER}}
