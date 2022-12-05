@@ -22,7 +22,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
           validators: {
             screens:{
-              Validators: 'dashboard'
+              Validators: 'validators'
             }
           }
         },
