@@ -36,11 +36,12 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  * https://reactnavigation.org/docs/modal
  */
 const Stack = createNativeStackNavigator<RootStackParamList>();
+const platform = Platform.OS === 'web' ? BottomTabNavigator : MyDrawer
 
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={Platform.OS === 'web' ? BottomTabNavigator : MyDrawer} options={{ headerShown: false }} />
+      <Stack.Screen name="Root" component={ platform} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
