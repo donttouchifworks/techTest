@@ -7,34 +7,9 @@ export default function Dashboard({ navigation }: RootTabScreenProps<'dashboard'
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
 
-    const getMovies = async () => {
-        try {
-            const response = await fetch(
-                'https://reactnative.dev/movies.json'
-            );
-            const json = await response.json();
-            alert(json.title)
-            return json.movies;
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    useEffect(() => {
-        getMovies();
-    }, []);
-
     return(
         <View style={ styles.container }>
-            {isLoading ? <ActivityIndicator/> : (
-                <FlatList
-                    data={data}
-                    keyExtractor={({ id }, index) => id}
-                    renderItem={({ item }) => (
-                        <Text>{item}</Text>
-                    )}
-                />
-            )}
+            <Text>Dash</Text>
         </View>
     )
 }
